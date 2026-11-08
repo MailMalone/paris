@@ -4,14 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#131a36" />
+    <style>html,body{min-height:100%;margin:0;background:#12172e;color:#fff7e9}</style>
     <meta name="description" content="The Last Waltz — Prom in Paris. Your invitation is waiting." />
     <title>The Last Waltz — Prom in Paris</title>
+    <link rel="preload" href="/fonts/cormorant-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/cormorant-garamond-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/montserrat-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/montserrat-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
     <main class="page" id="page">
       <div class="world" id="world">
-        <img class="scene-image" src="/illustrated-paris-clean.png" alt="" />
-        <button class="letter-hotspot" id="letter-hotspot" type="button" aria-label="Open the letter on the café table"><span class="hotspot-hint">Open the letter</span></button>
+        <picture class="scene-image">
+          <source media="(max-width: 600px)" srcset="/illustrated-paris-mobile.png" />
+          <img src="/illustrated-paris-motion.png" alt="" />
+        </picture>
+        <span class="light-glow glow-one" aria-hidden="true"></span>
+        <span class="light-glow glow-two" aria-hidden="true"></span>
+        <span class="light-glow glow-three" aria-hidden="true"></span>
+        <span class="star star-one" aria-hidden="true"></span>
+        <span class="star star-two" aria-hidden="true"></span>
+        <span class="star star-three" aria-hidden="true"></span>
+        <span class="star star-four" aria-hidden="true"></span>
+        <span class="star star-five" aria-hidden="true"></span>
+        <img class="bouquet bouquet-left" src="/painted-bouquet.png" alt="" aria-hidden="true" />
+        <img class="bouquet bouquet-right" src="/painted-bouquet.png" alt="" aria-hidden="true" />
+        <img class="petal" style="--x:52%;--y:18%;--mx:29%;--my:8%" src="/painted-petal.png" alt="" aria-hidden="true" />
+        <img class="petal" style="--x:68%;--y:29%;--mx:70%;--my:17%" src="/painted-petal.png" alt="" aria-hidden="true" />
+        <img class="petal" style="--x:62%;--y:48%;--mx:52%;--my:28%" src="/painted-petal.png" alt="" aria-hidden="true" />
+        <img class="petal" style="--x:76%;--y:36%;--mx:81%;--my:37%" src="/painted-petal.png" alt="" aria-hidden="true" />
+        <span class="flame-aura" aria-hidden="true"></span>
+        <span class="flame-shape" aria-hidden="true"></span>
+        <button class="letter-hotspot" id="letter-hotspot" type="button" aria-label="Open the letter on the café table"><img src="/painted-envelope.png" alt="" /><span class="hotspot-hint">Open the letter</span></button>
       </div>
       <div class="scene-shade" aria-hidden="true"></div>
 
@@ -45,7 +71,7 @@
           <div class="envelope-back"></div>
           <div class="envelope-flap" id="envelope-flap"></div>
           <div class="envelope-front"></div>
-          <div class="envelope-seal" id="envelope-seal">W</div>
+          <div class="envelope-sealed" id="envelope-sealed"></div>
         </div>
         <article class="letter-card" id="letter-card" tabindex="-1">
           <div class="letter-ornament" aria-hidden="true">✦</div>
