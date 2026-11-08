@@ -1,0 +1,82 @@
+:root{font-family:'Cormorant Garamond',Georgia,serif;color:#fff7e9;background:#12172e;font-synthesis:none;text-rendering:optimizeLegibility}
+*{box-sizing:border-box}
+body{margin:0;min-width:320px}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit}
+button:focus-visible,a:focus-visible{outline:3px solid #f6cb76;outline-offset:5px}
+::selection{background:#8a2635;color:#fff7e9}
+.page{position:relative;min-height:100svh;overflow:hidden;isolation:isolate;background:#12172e}
+.world{position:absolute;width:max(100vw,177.99svh);height:max(100svh,56.18vw);top:50%;left:50%;translate:-50% -50%;will-change:transform,opacity}
+.scene-image{display:block;width:100%;height:100%}
+.scene-shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(11,15,35,.25),transparent 47%)}
+.letter-hotspot{position:absolute;left:74.5%;top:77.5%;width:11.5%;height:11%;border:0;background:transparent;cursor:pointer;border-radius:3px}
+.letter-hotspot::after{content:'';position:absolute;inset:-6px;border:1px solid rgba(246,203,118,0);border-radius:8px;transition:border-color .18s ease,box-shadow .18s ease}
+.hotspot-hint{position:absolute;left:50%;bottom:105%;transform:translateX(-50%);white-space:nowrap;background:#181b36;color:#f7d99e;padding:.4rem .7rem;border:1px solid #c69b5c;font:500 .65rem Montserrat,sans-serif;letter-spacing:.08em;text-transform:uppercase;opacity:0;transition:opacity .18s ease;pointer-events:none}
+@media (hover:hover) and (pointer:fine){.letter-hotspot:hover::after{border-color:#f6cb76;box-shadow:0 0 20px rgba(246,203,118,.4)}.letter-hotspot:hover .hotspot-hint{opacity:1}}
+.site-header{position:relative;z-index:3;display:flex;justify-content:space-between;align-items:flex-start;padding:28px 2.6vw;gap:24px}
+.brand{display:flex;gap:14px;align-items:center;color:#f5eddf;text-decoration:none}
+.brand-mark{display:grid;place-items:center;width:60px;height:60px;border:1px solid #dcb36e;border-radius:50%;font-size:30px;font-style:italic;color:#e1bc7b;box-shadow:inset 0 0 0 4px #13182e,inset 0 0 0 5px #c59a5c}
+.brand-words{display:flex;flex-direction:column;line-height:1}
+.brand-words strong{font-size:1.23rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
+.brand-words em{font-size:1.45rem;color:#e8ba75;line-height:1.05}
+.menu-button{display:flex;align-items:center;gap:10px;padding:14px 20px;color:#fff4e4;background:rgba(11,15,31,.75);border:1px solid #d1ac73;cursor:pointer;font:600 .75rem Montserrat,sans-serif;letter-spacing:.19em;text-transform:uppercase;transition:background-color .18s ease,color .18s ease}
+.menu-button svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+@media (hover:hover) and (pointer:fine){.menu-button:hover{background:#f4e9d4;color:#651c2a}}
+.hero{position:absolute;z-index:2;top:33%;left:4.3%;width:min(32vw,540px);pointer-events:none}
+.eyebrow{margin:0 0 22px;font:500 .68rem Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.32em;color:#e5bf7c}
+.hero h1{font-size:clamp(3.35rem,3.9vw,5rem);font-weight:400;font-style:italic;line-height:.99;letter-spacing:-.02em;margin:0 0 28px;text-wrap:balance;text-shadow:0 2px 10px #10172b}
+.hero-copy{font-size:clamp(1.2rem,1.55vw,1.65rem);line-height:1.25;max-width:31ch;margin:0 0 31px;text-shadow:0 2px 8px #10172b}
+.primary-button{display:inline-flex;align-items:center;gap:18px;min-height:66px;padding:0 27px;border:2px solid #d7a864;outline:1px solid #631b2d;outline-offset:-6px;background:#7e2635;color:#fff5e8;cursor:pointer;pointer-events:auto;text-transform:uppercase;letter-spacing:.19em;font:600 .78rem Montserrat,sans-serif;box-shadow:0 8px 25px #0b0d21a8;transition:background-color .16s ease,transform .16s ease}
+.diamond{width:9px;height:9px;background:#e4c079;transform:rotate(45deg)}
+@media (hover:hover) and (pointer:fine){.primary-button:hover{background:#a33243;transform:translateY(-2px)}}
+.primary-button:active{transform:translateY(0)}
+.site-menu{position:absolute;z-index:10;right:2.6vw;top:94px;width:min(330px,90vw);padding:25px;background:#f5e8d0;color:#4d1624;box-shadow:0 20px 50px #090b1f88;border:1px solid #c69b5c}
+.site-menu[hidden]{display:none}
+.site-menu p{margin:0 0 15px;font-size:1.7rem;font-style:italic}
+.site-menu button{width:100%;display:flex;justify-content:space-between;padding:15px;border:1px solid #7e2635;background:#7e2635;color:white;cursor:pointer;font:500 .75rem Montserrat,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.invitation-stage{position:fixed;z-index:20;inset:0;display:grid;place-items:center;visibility:hidden;opacity:0;perspective:1300px;overflow:hidden}
+.stage-backdrop{position:absolute;inset:-20px;background:linear-gradient(#101427aa,#13172be8),url('/illustrated-paris-clean.png') center/cover;filter:blur(9px)}
+.close-button{position:absolute;z-index:10;right:3%;top:4%;display:flex;gap:10px;align-items:center;padding:10px 14px;border:1px solid #e2be82;background:#151a34;color:#f6ecd8;cursor:pointer;font:500 .72rem Montserrat,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.close-button::first-letter{font-size:1.2rem}
+.envelope{position:absolute;z-index:2;width:min(560px,78vw);aspect-ratio:1.7;top:50%;left:50%;translate:-50% -43%;filter:drop-shadow(0 28px 35px #080b1dbb);transform-style:preserve-3d}
+.envelope-back{position:absolute;inset:0;background:#e9d0a7;border:2px solid #b69665;box-shadow:inset 0 0 45px #9a714044}
+.envelope-flap{position:absolute;z-index:4;inset:0 0 44%;background:linear-gradient(160deg,#fff0d2,#c5a678);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top center;backface-visibility:visible}
+.envelope-front{position:absolute;z-index:3;inset:0;background:linear-gradient(145deg,#fff2d8,#d7b889);clip-path:polygon(0 0,50% 55%,100% 0,100% 100%,0 100%);border:2px solid #bb9661}
+.envelope-seal{position:absolute;z-index:5;left:50%;top:42%;display:grid;place-items:center;width:70px;height:70px;transform:translate(-50%,-50%);border-radius:45% 55% 52% 48%;background:#7a1c30;color:#e4bd78;border:2px solid #b35a5e;box-shadow:inset 0 0 0 5px #8e2a3a,0 6px 12px #3b152255;font-size:2rem;font-style:italic}
+.letter-card{position:absolute;z-index:6;left:50%;top:50%;translate:-50% -40%;width:min(480px,76vw);min-height:460px;padding:46px 36px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#f4e7ce;color:#591e2a;border:10px solid #f4e7ce;outline:1px solid #c79f69;outline-offset:-21px;box-shadow:0 25px 70px #06091cb3;visibility:hidden;opacity:0}
+.letter-ornament{font-size:1.6rem;color:#b9905c}
+.letter-overline{margin:15px 0 5px;font:500 .75rem Montserrat,sans-serif;letter-spacing:.28em;text-transform:uppercase}
+.letter-card h2{margin:0;color:#71283a;font-size:clamp(3.1rem,5vw,4.5rem);font-style:italic;font-weight:400;line-height:1}
+.letter-card p:not(.letter-overline){font-size:1.6rem;line-height:1.2}
+.letter-rule{width:120px;height:1px;background:#c2965b;margin:5px 0}
+.letter-card .letter-signoff{font-style:italic;margin:18px 0 0}
+.page.is-opening .letter-hotspot,.page.is-opening .primary-button,.page.is-opening .menu-button{pointer-events:none}
+.page.is-open .close-button{pointer-events:auto}
+@media (max-width:1100px){
+  .page{min-height:100svh;overflow:auto;background:#141a37}
+  .world{top:0;left:auto;right:0;translate:none;width:max(100vw,105svh);height:auto;aspect-ratio:1672/939}
+  .scene-image{width:100%;height:100%}
+  .scene-shade{inset:0 0 auto;height:65svh;background:linear-gradient(#10152c55,transparent 35%,#141a37 100%)}
+  .site-header{padding:18px 18px 0;align-items:center}
+  .brand{gap:8px}
+  .brand-mark{width:43px;height:43px;font-size:23px}
+  .brand-words strong{font-size:.75rem;letter-spacing:.15em}
+  .brand-words em{font-size:1rem}
+  .menu-button{padding:10px 11px;font-size:.62rem;gap:5px}
+  .hero{position:relative;top:auto;left:auto;width:auto;padding:calc(48svh - 74px) 25px 48px}
+  .eyebrow{font-size:.55rem;letter-spacing:.21em;margin-bottom:13px}
+  .hero h1{font-size:clamp(3rem,8vw,3.8rem);max-width:12ch;margin-bottom:18px}
+  .hero-copy{font-size:1.25rem;margin-bottom:23px}
+  .primary-button{min-height:57px;font-size:.67rem;padding:0 18px;gap:13px}
+  .letter-hotspot{left:74.5%;top:77%;width:11.5%;height:12%}
+  .site-menu{top:73px;right:18px}
+  .envelope{width:min(560px,85vw);top:50%}
+  .letter-card{width:min(88vw,420px);min-height:390px;padding:35px 26px}
+  .close-button{right:18px;top:18px}
+}
+@media (max-width:600px){
+  .world{width:max(100vw,80svh)}
+  .scene-shade{height:55svh}
+  .hotspot-hint{opacity:1;font-size:.52rem}
+}
+@media (prefers-reduced-motion:reduce){.primary-button,.menu-button,.letter-hotspot::after,.hotspot-hint{transition:none}}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#131a36" />
+    <meta name="description" content="The Last Waltz — Prom in Paris. Your invitation is waiting." />
+    <title>The Last Waltz — Prom in Paris</title>
+  </head>
+  <body>
+    <main class="page" id="page">
+      <div class="world" id="world">
+        <img class="scene-image" src="/illustrated-paris-clean.png" alt="" />
+        <button class="letter-hotspot" id="letter-hotspot" type="button" aria-label="Open the letter on the café table"><span class="hotspot-hint">Open the letter</span></button>
+      </div>
+      <div class="scene-shade" aria-hidden="true"></div>
+
+      <header class="site-header" id="site-header">
+        <a class="brand" href="/" aria-label="The Last Waltz home">
+          <span class="brand-mark" aria-hidden="true">W</span>
+          <span class="brand-words"><strong>The Last Waltz</strong><em>Prom in Paris</em></span>
+        </a>
+        <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="site-menu">
+          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M3 7h18M3 12h13M3 17h10" /></svg>
+          Menu
+        </button>
+      </header>
+
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">The Last Waltz · Prom in Paris</p>
+        <h1 id="hero-title">Tonight, Paris is dressed for our prom.</h1>
+        <p class="hero-copy">Your invitation waits on the marble table, sealed in burgundy wax. It bears your name.</p>
+        <button class="primary-button" id="open-button" type="button"><span class="diamond" aria-hidden="true"></span>Open the invitation</button>
+      </section>
+
+      <div class="site-menu" id="site-menu" hidden>
+        <p>Where to tonight?</p>
+        <button type="button" id="menu-open">Open the invitation <span aria-hidden="true">↗</span></button>
+      </div>
+
+      <section class="invitation-stage" id="invitation-stage" role="dialog" aria-modal="true" aria-label="Opened invitation" aria-hidden="true">
+        <div class="stage-backdrop" aria-hidden="true"></div>
+        <button class="close-button" id="close-button" type="button" aria-label="Return to Paris">× <span>Return to Paris</span></button>
+        <div class="envelope" id="envelope" aria-hidden="true">
+          <div class="envelope-back"></div>
+          <div class="envelope-flap" id="envelope-flap"></div>
+          <div class="envelope-front"></div>
+          <div class="envelope-seal" id="envelope-seal">W</div>
+        </div>
+        <article class="letter-card" id="letter-card" tabindex="-1">
+          <div class="letter-ornament" aria-hidden="true">✦</div>
+          <p class="letter-overline">The Last Waltz</p>
+          <h2>Prom in Paris</h2>
+          <p>A night of elegance.<br />A lifetime of memories.</p>
+          <div class="letter-rule" aria-hidden="true"></div>
+          <p class="letter-signoff">Your invitation awaits.</p>
+        </article>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
